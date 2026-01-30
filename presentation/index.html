@@ -15,6 +15,31 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/white.min.css">
 
+	<!-- Tailwind CSS & Lucide Icons -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						medisync: {
+							50: '#f0f9ff',
+							100: '#e0f2fe',
+							500: '#0ea5e9',
+							600: '#0284c7',
+							800: '#075985',
+							900: '#0c4a6e',
+						}
+					},
+					fontFamily: {
+						sans: ['Inter', 'sans-serif'],
+					}
+				}
+			}
+		}
+	</script>
+
 	<!-- Custom Styling -->
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -24,176 +49,509 @@
 		<div class="slides">
 
 			<!-- Slide 1: Title -->
-			<section class="text-center">
-				<div class="card">
-					<h1>Medisync</h1>
-					<h3>AI-Powered Hospital Orchestration</h3>
-					<p class="highlight">Optimizing Operations • Balancing Workloads • Real-Time Auditing</p>
-					<br>
-					<small>Future Org Design Proposal</small>
+			<section>
+				<div
+					class="glass-card p-10 rounded-3xl text-center max-w-5xl mx-auto border-t border-white/50 shadow-2xl relative overflow-hidden">
+					<!-- Background Accents -->
+					<div class="absolute -top-20 -right-20 w-64 h-64 bg-medisync-100 rounded-full blur-3xl opacity-50">
+					</div>
+					<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-teal-100 rounded-full blur-3xl opacity-50">
+					</div>
+
+					<div class="relative z-10">
+						<div class="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
+							<span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Arkavidia
+								Hackathon</span>
+							<span
+								class="text-sm font-bold text-medisync-600 uppercase tracking-widest bg-medisync-50 px-3 py-1 rounded-full">Team:
+								AI Slop</span>
+						</div>
+
+						<div class="mb-6 flex justify-center">
+							<div class="bg-gradient-to-br from-medisync-500 to-teal-400 p-4 rounded-2xl shadow-lg">
+								<i data-lucide="activity" class="w-16 h-16 text-white"></i>
+							</div>
+						</div>
+
+						<h1 class="text-7xl font-black tracking-tighter mb-2 text-slate-800">
+							Medisync
+						</h1>
+
+						<h3 class="text-2xl font-semibold text-slate-500 mb-8">
+							AI-Powered Hospital Orchestration
+						</h3>
+
+						<div
+							class="inline-block border-2 border-medisync-100 rounded-xl p-1 bg-white/50 mb-8 transform hover:scale-105 transition-transform cursor-default">
+							<div
+								class="bg-gradient-to-r from-medisync-500 to-teal-500 text-white px-6 py-2 rounded-lg font-bold text-lg tracking-wide shadow-sm">
+								Future Org Design Proposal
+							</div>
+						</div>
+
+						<div class="grid grid-cols-3 gap-4 text-center mt-4">
+							<div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+								<i data-lucide="zap" class="w-6 h-6 text-amber-500 mx-auto mb-2"></i>
+								<span class="text-xs font-bold text-slate-600 uppercase block">Optimizing Ops</span>
+							</div>
+							<div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+								<i data-lucide="scale" class="w-6 h-6 text-medisync-500 mx-auto mb-2"></i>
+								<span class="text-xs font-bold text-slate-600 uppercase block">Balancing Load</span>
+							</div>
+							<div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+								<i data-lucide="shield-check" class="w-6 h-6 text-emerald-500 mx-auto mb-2"></i>
+								<span class="text-xs font-bold text-slate-600 uppercase block">Real-Time Audit</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
 			<!-- Slide 2: Introduction -->
 			<section>
-				<h2>The Challenge</h2>
-				<div class="card">
-					<p><strong>Hospital services are inherently complex.</strong></p>
-					<hr style="border-color: rgba(0,0,0,0.1);">
-					<div class="fragment fade-up">
-						<h4>🛑 Fragmented Coordination</h4>
-						<p class="small-text">Unsynchronized collaboration between departments leads to inefficiencies.
-						</p>
-					</div>
-					<div class="fragment fade-up">
-						<h4>🛑 Workload Imbalance</h4>
-						<p class="small-text">Manual assignment causes nurse burnout and compromised care quality.</p>
-					</div>
-					<div class="fragment fade-up">
-						<h4>🛑 Operational Delays</h4>
-						<p class="small-text">Reliance on memory and manual docs slows down critical procedures.</p>
+				<h2 class="text-4xl font-bold text-medisync-900 mb-8 flex items-center gap-3 justify-center">
+					<i data-lucide="alert-circle" class="w-8 h-8 text-red-500"></i> The Challenge
+				</h2>
+
+				<div class="glass-card p-8 rounded-2xl max-w-5xl mx-auto">
+					<p class="text-xl font-medium text-slate-700 mb-8 text-center">
+						Hospital services are inherently complex systems prone to entropy.
+					</p>
+
+					<div class="grid grid-cols-3 gap-6">
+						<div
+							class="fragment fade-up bg-white/50 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-all">
+							<div class="bg-red-50 w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+								<i data-lucide="puzzle" class="w-5 h-5 text-red-500"></i>
+							</div>
+							<h4 class="text-lg font-bold text-slate-800 mb-2">Fragmented Coordination</h4>
+							<p class="text-sm text-slate-500 leading-relaxed">
+								Unsynchronized collaboration between departments leads to operational opacity and
+								inefficiencies.
+							</p>
+						</div>
+
+						<div
+							class="fragment fade-up bg-white/50 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-all">
+							<div class="bg-orange-50 w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+								<i data-lucide="battery-warning" class="w-5 h-5 text-orange-500"></i>
+							</div>
+							<h4 class="text-lg font-bold text-slate-800 mb-2">Workload Imbalance</h4>
+							<p class="text-sm text-slate-500 leading-relaxed">
+								Manual assignment creates unfair distribution, causing nurse burnout and compromising
+								care quality.
+							</p>
+						</div>
+
+						<div
+							class="fragment fade-up bg-white/50 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-all">
+							<div class="bg-slate-50 w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+								<i data-lucide="clock" class="w-5 h-5 text-slate-500"></i>
+							</div>
+							<h4 class="text-lg font-bold text-slate-800 mb-2">Operational Delays</h4>
+							<p class="text-sm text-slate-500 leading-relaxed">
+								Reliance on human memory and manual documentation slows down critical multi-step
+								procedures.
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- Slide 3: Problem Statement -->
 			<section>
-				<h2>Key Problems</h2>
-				<div class="container">
-					<div class="col fragment fade-right">
-						<h4>Coordination</h4>
-						<p class="small-text">How to unify medical, admin, and support staff?</p>
+				<div class="max-w-6xl mx-auto">
+					<div class="flex items-center justify-center gap-4 mb-12">
+						<div class="h-px bg-slate-300 w-24"></div>
+						<h2 class="text-3xl font-bold text-slate-800 uppercase tracking-widest">Key Problems</h2>
+						<div class="h-px bg-slate-300 w-24"></div>
 					</div>
-					<div class="col fragment fade-up">
-						<h4>Allocation</h4>
-						<p class="small-text">How to assign tasks fairly based on <em>real-time</em> data?</p>
-					</div>
-					<div class="col fragment fade-left">
-						<h4>Execution</h4>
-						<p class="small-text">How to automate tracking of medical instructions?</p>
+
+					<div class="grid grid-cols-3 gap-8">
+						<div class="fragment fade-right group">
+							<div
+								class="glass-card p-8 rounded-2xl border-t-4 border-blue-500 h-full hover:-translate-y-1 transition-transform duration-300">
+								<div class="mb-4 text-blue-500 group-hover:scale-110 transition-transform duration-300">
+									<i data-lucide="network" class="w-12 h-12"></i>
+								</div>
+								<h4 class="text-2xl font-bold text-slate-800 mb-3">Coordination</h4>
+								<p class="text-base text-slate-600">
+									How to unify medical, admin, and support staff into a cohesive unit?
+								</p>
+							</div>
+						</div>
+
+						<div class="fragment fade-up group">
+							<div
+								class="glass-card p-8 rounded-2xl border-t-4 border-cyan-500 h-full hover:-translate-y-1 transition-transform duration-300">
+								<div class="mb-4 text-cyan-500 group-hover:scale-110 transition-transform duration-300">
+									<i data-lucide="bar-chart-3" class="w-12 h-12"></i>
+								</div>
+								<h4 class="text-2xl font-bold text-slate-800 mb-3">Allocation</h4>
+								<p class="text-base text-slate-600">
+									How to assign tasks <em>fairly</em> based on real-time capacity and capability?
+								</p>
+							</div>
+						</div>
+
+						<div class="fragment fade-left group">
+							<div
+								class="glass-card p-8 rounded-2xl border-t-4 border-indigo-500 h-full hover:-translate-y-1 transition-transform duration-300">
+								<div
+									class="mb-4 text-indigo-500 group-hover:scale-110 transition-transform duration-300">
+									<i data-lucide="check-square" class="w-12 h-12"></i>
+								</div>
+								<h4 class="text-2xl font-bold text-slate-800 mb-3">Execution</h4>
+								<p class="text-base text-slate-600">
+									How to automate the tracking and validation of medical instructions?
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- Slide 4: Objectives -->
 			<section>
-				<h2>Objectives</h2>
-				<div class="card">
-					<ul>
-						<li class="fragment"><strong>Enhance Utilization:</strong> Auto-assign based on capacity.</li>
-						<li class="fragment"><strong>Timely Execution:</strong> Intelligent scheduling & alerts.</li>
-						<li class="fragment"><strong>Stop Leakage:</strong> Automated financial auditing.</li>
-						<li class="fragment"><strong>Empower Patients:</strong> AI Chatbots for personalized info.</li>
-					</ul>
+				<h2 class="text-4xl font-bold text-medisync-900 mb-8 flex items-center justify-center gap-3">
+					<i data-lucide="target" class="w-10 h-10 text-medisync-600"></i> Objectives
+				</h2>
+				<div class="glass-card p-8 rounded-2xl max-w-6xl mx-auto">
+					<div class="grid grid-cols-2 gap-6">
+						<div
+							class="fragment flex flex-col p-6 rounded-xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all">
+							<div class="flex items-center gap-3 mb-3">
+								<div class="bg-blue-100 p-2 rounded-lg">
+									<i data-lucide="trending-up" class="w-6 h-6 text-blue-600"></i>
+								</div>
+								<strong class="text-xl text-slate-800">Enhance Utilization</strong>
+							</div>
+							<span class="text-slate-600 text-sm leading-relaxed">Auto-assign tasks based on real-time
+								staff capacity ensuring no resource is wasted.</span>
+						</div>
+
+						<div
+							class="fragment flex flex-col p-6 rounded-xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all">
+							<div class="flex items-center gap-3 mb-3">
+								<div class="bg-indigo-100 p-2 rounded-lg">
+									<i data-lucide="clock-4" class="w-6 h-6 text-indigo-600"></i>
+								</div>
+								<strong class="text-xl text-slate-800">Timely Execution</strong>
+							</div>
+							<span class="text-slate-600 text-sm leading-relaxed">Intelligent scheduling & proactive
+								alerts to prevent critical delays in patient care.</span>
+						</div>
+
+						<div
+							class="fragment flex flex-col p-6 rounded-xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all">
+							<div class="flex items-center gap-3 mb-3">
+								<div class="bg-emerald-100 p-2 rounded-lg">
+									<i data-lucide="lock" class="w-6 h-6 text-emerald-600"></i>
+								</div>
+								<strong class="text-xl text-slate-800">Stop Revenue Leakage</strong>
+							</div>
+							<span class="text-slate-600 text-sm leading-relaxed">Automated financial auditing closes
+								gaps between service delivery and final billing.</span>
+						</div>
+
+						<div
+							class="fragment flex flex-col p-6 rounded-xl bg-white/50 border border-white/60 shadow-sm hover:shadow-md transition-all">
+							<div class="flex items-center gap-3 mb-3">
+								<div class="bg-rose-100 p-2 rounded-lg">
+									<i data-lucide="heart-handshake" class="w-6 h-6 text-rose-600"></i>
+								</div>
+								<strong class="text-xl text-slate-800">Empower Patients</strong>
+							</div>
+							<span class="text-slate-600 text-sm leading-relaxed">AI Chatbots provide instant,
+								personalized information and 24/7 support.</span>
+						</div>
+					</div>
 				</div>
 			</section>
 
 			<!-- Slide 5: Target Users -->
 			<section>
-				<h2>Target Users</h2>
-				<div class="container">
-					<div class="col fragment">
-						<h4>Management</h4>
-						<p class="small-text">Operational monitoring.</p>
+				<h2 class="text-4xl font-bold text-medisync-900 mb-10">Target Users</h2>
+				<div class="grid grid-cols-2 gap-8 max-w-5xl mx-auto">
+					<div
+						class="fragment glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform">
+						<div class="bg-slate-100 p-4 rounded-full mb-4">
+							<i data-lucide="briefcase" class="w-10 h-10 text-slate-700"></i>
+						</div>
+						<h4 class="text-2xl font-bold text-slate-800 mb-2">Management</h4>
+						<p class="text-slate-500 text-sm">Real-time operational monitoring & strategic insights.</p>
 					</div>
-					<div class="col fragment">
-						<h4>Doctors</h4>
-						<p class="small-text">AI Clinical support.</p>
+
+					<div
+						class="fragment glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform">
+						<div class="bg-blue-100 p-4 rounded-full mb-4">
+							<i data-lucide="stethoscope" class="w-10 h-10 text-blue-700"></i>
+						</div>
+						<h4 class="text-2xl font-bold text-slate-800 mb-2">Doctors</h4>
+						<p class="text-slate-500 text-sm">AI-powered clinical decision support & seamless charting.</p>
 					</div>
-				</div>
-				<br>
-				<div class="container">
-					<div class="col fragment">
-						<h4>Nurses</h4>
-						<p class="small-text">Fair task lists.</p>
+
+					<div
+						class="fragment glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform">
+						<div class="bg-teal-100 p-4 rounded-full mb-4">
+							<i data-lucide="user-plus" class="w-10 h-10 text-teal-700"></i>
+						</div>
+						<h4 class="text-2xl font-bold text-slate-800 mb-2">Nurses</h4>
+						<p class="text-slate-500 text-sm">Fair task distribution & reduced administrative burden.</p>
 					</div>
-					<div class="col fragment">
-						<h4>Patients</h4>
-						<p class="small-text">Fast service.</p>
+
+					<div
+						class="fragment glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform">
+						<div class="bg-rose-100 p-4 rounded-full mb-4">
+							<i data-lucide="heart" class="w-10 h-10 text-rose-700"></i>
+						</div>
+						<h4 class="text-2xl font-bold text-slate-800 mb-2">Patients</h4>
+						<p class="text-slate-500 text-sm">Faster service, transparent billing, and better care.</p>
 					</div>
 				</div>
 			</section>
 
 			<!-- Slide 6: Solution Overview -->
 			<section>
-				<h2>Medisync Solution</h2>
-				<p>A central nervous system for hospitals.</p>
-				<div class="card">
-					<p><strong class="highlight">Phase 1: Orchestrator</strong><br> <span class="small-text">Patient
-							tickets, active workload allocation, procedure records.</span></p>
-					<p><strong class="highlight">Phase 2: Decision Support</strong><br> <span class="small-text">AI
-							recommendations for diagnostics and prescriptions.</span></p>
-					<p><strong class="highlight">Phase 3: Automated Payment</strong><br> <span
-							class="small-text">Real-time billing closure.</span></p>
+				<div class="text-center mb-10">
+					<h2 class="text-4xl font-bold text-medisync-900 mb-2">Medisync Solution</h2>
+					<p class="text-xl text-slate-500 font-light">A central nervous system for modern hospitals.</p>
+				</div>
+
+				<div class="grid grid-cols-3 gap-6 max-w-6xl mx-auto">
+					<div
+						class="glass-card p-6 rounded-2xl border-t-8 border-medisync-500 flex flex-col h-full bg-white/60">
+						<div class="mb-4">
+							<span
+								class="bg-medisync-100 text-medisync-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Phase
+								1</span>
+						</div>
+						<h4 class="text-xl font-bold text-slate-800 mb-3">Orchestrator</h4>
+						<p class="text-sm text-slate-600 flex-grow">
+							Intelligent patient ticketing, active workload allocation, and digitized procedure records.
+						</p>
+						<div class="mt-4 flex justify-end">
+							<i data-lucide="git-merge" class="text-medisync-400 w-6 h-6"></i>
+						</div>
+					</div>
+
+					<div
+						class="glass-card p-6 rounded-2xl border-t-8 border-violet-500 flex flex-col h-full bg-white/60">
+						<div class="mb-4">
+							<span
+								class="bg-violet-100 text-violet-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Phase
+								2</span>
+						</div>
+						<h4 class="text-xl font-bold text-slate-800 mb-3">Decision Support</h4>
+						<p class="text-sm text-slate-600 flex-grow">
+							AI-driven recommendations for diagnostics, prescriptions, and treatment plans.
+						</p>
+						<div class="mt-4 flex justify-end">
+							<i data-lucide="brain-circuit" class="text-violet-400 w-6 h-6"></i>
+						</div>
+					</div>
+
+					<div
+						class="glass-card p-6 rounded-2xl border-t-8 border-emerald-500 flex flex-col h-full bg-white/60">
+						<div class="mb-4">
+							<span
+								class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Phase
+								3</span>
+						</div>
+						<h4 class="text-xl font-bold text-slate-800 mb-3">Automated Payment</h4>
+						<p class="text-sm text-slate-600 flex-grow">
+							Real-time billing audit and closure, minimizing delays and disputes.
+						</p>
+						<div class="mt-4 flex justify-end">
+							<i data-lucide="wallet" class="text-emerald-400 w-6 h-6"></i>
+						</div>
+					</div>
 				</div>
 			</section>
 
 			<!-- Slide 7: Innovation & AI -->
 			<section>
-				<h2>The AI Engine</h2>
-				<p>Multi-Agent System (MAS) Approach</p>
-				<div class="container">
-					<div class="col" style="flex: 2;">
-						<h4>🤖 Role Assigner</h4>
-						<p class="small-text">Dynamic Workload Balancer. Detects "Doctor A has 14 cases" vs "Doctor B
-							has 11" and routes accordingly.</p>
+				<h2 class="text-4xl font-bold text-medisync-900 mb-2 flex items-center justify-center gap-3">
+					<i data-lucide="cpu" class="w-10 h-10 text-violet-600"></i> The AI Engine
+				</h2>
+				<p class="text-slate-500 mb-8 font-light">Multi-Agent System (MAS) Architecture</p>
+
+				<div class="grid grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+					<div class="glass-card p-8 rounded-2xl border-l-4 border-violet-500 text-left bg-white/60">
+						<div class="flex items-center gap-3 mb-3">
+							<div class="bg-violet-100 p-2 rounded-lg">
+								<i data-lucide="bot" class="w-6 h-6 text-violet-600"></i>
+							</div>
+							<h4 class="text-xl font-bold text-slate-800 m-0">Role Assigner</h4>
+						</div>
+						<p class="text-sm text-slate-600 leading-relaxed">
+							<strong>Dynamic Workload Balancer.</strong> Detects "Dr. A has 14 cases" vs "Dr. B has 11"
+							and routes patients intelligently.
+						</p>
 					</div>
-					<div class="col" style="flex: 1.5;">
-						<h4>🤖 Context Chatbot</h4>
-						<p class="small-text">RAG-based. Checks EMR before answering.</p>
+
+					<div class="glass-card p-8 rounded-2xl border-l-4 border-amber-500 text-left bg-white/60">
+						<div class="flex items-center gap-3 mb-3">
+							<div class="bg-amber-100 p-2 rounded-lg">
+								<i data-lucide="message-square-text" class="w-6 h-6 text-amber-600"></i>
+							</div>
+							<h4 class="text-xl font-bold text-slate-800 m-0">Context Chatbot</h4>
+						</div>
+						<p class="text-sm text-slate-600 leading-relaxed">
+							<strong>RAG-based Assistance.</strong> Instantly retrieves and synthesizes patient EMR data
+							for clinical queries.
+						</p>
 					</div>
 				</div>
-				<div class="card">
-					<h4>🛡️ The Audit Triad</h4>
-					<ul class="pill-list" style="justify-content: center;">
-						<li>Audit Ruangan (Facilities)</li>
-						<li>Audit Obat (Contraindications)</li>
-						<li>Audit Harga (Real-time Billing)</li>
-					</ul>
+
+				<div class="glass-card p-6 rounded-2xl border border-slate-200 bg-slate-50/80 max-w-3xl mx-auto">
+					<h4 class="text-lg font-bold text-slate-700 mb-4 flex items-center justify-center gap-2">
+						<i data-lucide="shield-check" class="w-5 h-5 text-emerald-600"></i> The Audit Triad
+					</h4>
+					<div class="flex justify-center gap-4">
+						<span
+							class="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-600 shadow-sm flex items-center gap-2">
+							<i data-lucide="building-2" class="w-4 h-4 text-slate-400"></i> Facilities
+						</span>
+						<span
+							class="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-600 shadow-sm flex items-center gap-2">
+							<i data-lucide="pill" class="w-4 h-4 text-slate-400"></i> Contraindications
+						</span>
+						<span
+							class="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-600 shadow-sm flex items-center gap-2">
+							<i data-lucide="receipt" class="w-4 h-4 text-slate-400"></i> Real-time Billing
+						</span>
+					</div>
 				</div>
 			</section>
 
 			<!-- Slide 8: System Architecture -->
 			<section>
-				<h2>Workflow</h2>
-				<div class="card small-text">
-					<ol>
-						<li><strong>Entry:</strong> Registration -> Unique Ticket ID.</li>
-						<li><strong>Orchestration:</strong> Agent assigns Team (Dr/Nurse) based on load.</li>
-						<li><strong>Validation:</strong> Room Audit checks availability.</li>
-						<li><strong>Care:</strong> Doctor gets AI Clinical Decision Support.</li>
-						<li><strong>Exit:</strong> Discharge -> Auto-Invoice -> Online Payment.</li>
-					</ol>
+				<h2 class="text-4xl font-bold text-medisync-900 mb-10">Workflow</h2>
+				<div class="max-w-5xl mx-auto relative">
+					<!-- Connecting Line -->
+					<div
+						class="absolute left-[28px] top-6 bottom-6 w-1 bg-gradient-to-b from-medisync-200 to-medisync-500 rounded hidden md:block">
+					</div>
+
+					<div class="space-y-6">
+						<div
+							class="fragment flex items-center gap-6 relative z-10 hover:translate-x-2 transition-transform">
+							<div
+								class="w-14 h-14 rounded-full bg-white border-4 border-medisync-100 flex items-center justify-center shadow-md">
+								<span class="text-medisync-600 font-bold text-xl">1</span>
+							</div>
+							<div
+								class="glass-card p-5 rounded-xl flex-grow text-left border-l-4 border-blue-400 bg-white/60">
+								<strong class="text-lg text-slate-800 block">Entry & Registration</strong>
+								<span class="text-slate-600 text-sm">Patient arrives -> Issued Unique Ticket ID.</span>
+							</div>
+						</div>
+
+						<div
+							class="fragment flex items-center gap-6 relative z-10 hover:translate-x-2 transition-transform">
+							<div
+								class="w-14 h-14 rounded-full bg-white border-4 border-medisync-200 flex items-center justify-center shadow-md">
+								<span class="text-medisync-600 font-bold text-xl">2</span>
+							</div>
+							<div
+								class="glass-card p-5 rounded-xl flex-grow text-left border-l-4 border-indigo-400 bg-white/60">
+								<strong class="text-lg text-slate-800 block">Orchestration</strong>
+								<span class="text-slate-600 text-sm">Agent assigns Optimal Team (Dr/Nurse) based on
+									load.</span>
+							</div>
+						</div>
+
+						<div
+							class="fragment flex items-center gap-6 relative z-10 hover:translate-x-2 transition-transform">
+							<div
+								class="w-14 h-14 rounded-full bg-white border-4 border-medisync-300 flex items-center justify-center shadow-md">
+								<span class="text-medisync-600 font-bold text-xl">3</span>
+							</div>
+							<div
+								class="glass-card p-5 rounded-xl flex-grow text-left border-l-4 border-violet-400 bg-white/60">
+								<strong class="text-lg text-slate-800 block">Validation & Care</strong>
+								<span class="text-slate-600 text-sm">Room Audit checks -> Doctor gets AI Clinical
+									Decision Support.</span>
+							</div>
+						</div>
+
+						<div
+							class="fragment flex items-center gap-6 relative z-10 hover:translate-x-2 transition-transform">
+							<div
+								class="w-14 h-14 rounded-full bg-white border-4 border-medisync-500 flex items-center justify-center shadow-md">
+								<span class="text-medisync-600 font-bold text-xl">4</span>
+							</div>
+							<div
+								class="glass-card p-5 rounded-xl flex-grow text-left border-l-4 border-emerald-400 bg-white/60">
+								<strong class="text-lg text-slate-800 block">Exit</strong>
+								<span class="text-slate-600 text-sm">Discharge -> Auto-Invoice -> Online Payment.</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
 			<!-- Slide 9: Impact Analysis -->
 			<section>
-				<h2>Impact</h2>
-				<div class="container">
-					<div class="col fragment">
-						<h4>❤️ Social</h4>
-						<p class="small-text">Reduced burnout.<br>Improves patient safety.</p>
+				<h2 class="text-4xl font-bold text-medisync-900 mb-10">Impact</h2>
+				<div class="grid grid-cols-3 gap-6 max-w-6xl mx-auto">
+					<div
+						class="fragment glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:bg-white/80 transition-colors">
+						<div class="bg-rose-100 p-4 rounded-full mb-6">
+							<i data-lucide="heart-pulse" class="w-12 h-12 text-rose-500"></i>
+						</div>
+						<h4 class="text-2xl font-bold text-slate-800 mb-2">Social</h4>
+						<p class="text-slate-600 text-sm">Reduced staff burnout.<br>Improves patient safety.</p>
 					</div>
-					<div class="col fragment">
-						<h4>💰 Economic</h4>
-						<p class="small-text">Stops revenue leakage.<br>Automated billing accuracy.</p>
+
+					<div
+						class="fragment glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:bg-white/80 transition-colors">
+						<div class="bg-emerald-100 p-4 rounded-full mb-6">
+							<i data-lucide="coins" class="w-12 h-12 text-emerald-500"></i>
+						</div>
+						<h4 class="text-2xl font-bold text-slate-800 mb-2">Economic</h4>
+						<p class="text-slate-600 text-sm">Stops revenue leakage.<br>Automated billing accuracy.</p>
 					</div>
-					<div class="col fragment">
-						<h4>🏥 Org</h4>
-						<p class="small-text">Adaptive, data-driven hospital management.</p>
+
+					<div
+						class="fragment glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:bg-white/80 transition-colors">
+						<div class="bg-blue-100 p-4 rounded-full mb-6">
+							<i data-lucide="building" class="w-12 h-12 text-blue-500"></i>
+						</div>
+						<h4 class="text-2xl font-bold text-slate-800 mb-2">Organizational</h4>
+						<p class="text-slate-600 text-sm">Adaptive, data-driven<br>hospital management.</p>
 					</div>
 				</div>
 			</section>
 
 			<!-- Slide 10: Conclusion -->
 			<section class="text-center">
-				<div class="card">
-					<h2>Future of Healthcare</h2>
-					<p>Medisync transforms hospitals from reactive to <strong>active, AI-orchestrated
-							organizations.</strong></p>
+				<div
+					class="glass-card p-16 rounded-3xl max-w-4xl mx-auto border-t border-white/60 shadow-2xl relative overflow-hidden">
+					<h2 class="text-5xl font-black text-medisync-900 mb-6 relative z-10">Future of Healthcare</h2>
+					<p class="text-2xl text-slate-600 font-light mb-12 relative z-10">
+						Medisync transforms hospitals from reactive to <br>
+						<strong class="text-medisync-600 font-bold bg-medisync-50 px-2 rounded">active, AI-orchestrated
+							organizations.</strong>
+					</p>
+
+					<div class="inline-block relative z-10">
+						<h3
+							class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-medisync-600 to-teal-500">
+							Thank You
+						</h3>
+						<div class="h-1 w-full bg-gradient-to-r from-medisync-600 to-teal-500 rounded mt-2"></div>
+					</div>
+
+					<!-- Decorative Background Elements -->
+					<div
+						class="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
+					</div>
+					<div
+						class="absolute bottom-0 left-0 w-64 h-64 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+					</div>
 				</div>
-				<h3 class="highlight">Thank You</h3>
 			</section>
 
 		</div>

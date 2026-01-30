@@ -1,13 +1,6 @@
 /* Medisync Theme - Clean Medical/Tech */
 :root {
-    --primary-color: #005b96;
-    --secondary-color: #6497b1;
-    --accent-color: #b3cde0;
-    --text-color: #333;
-    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    --card-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.5);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
 }
 
 body {
@@ -16,88 +9,42 @@ body {
 }
 
 .reveal {
-    color: var(--text-color);
+    color: #1e293b;
+    /* slate-800 */
 }
 
-.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-    color: var(--primary-color);
+/* Force Tailwind Specificity over Reveal Theme */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
     text-transform: none;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
 
-.reveal h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-    background: -webkit-linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Glassmorphism Utilities that are hard to do purely with standard Tailwind classes without config */
+.glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+/* Ensure slides allow flex/grid layouts from Tailwind */
 .reveal .slides section {
-    text-align: left;
-}
-
-/* Glassmorphism Card Style */
-.card {
-    background: var(--card-bg);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 20px;
-    border: var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    padding: 30px;
-    margin: 20px 0;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.col {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.3);
-}
-
-/* Utility Classes */
-.text-center {
-    text-align: center;
-}
-
-.highlight {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-.small-text {
-    font-size: 0.7em !important;
-}
-
-.pill-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.pill-list li {
-    background: var(--primary-color);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-size: 0.6em;
-}
-
-/* Animation Overrides */
-.reveal .slides > section.present {
-    top: 0 !important; /* Force top alignment for better card layout */
+    height: 100%;
     display: flex !important;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Lucide Icons alignment */
+.lucide {
+    display: inline-block;
+    vertical-align: middle;
 }
