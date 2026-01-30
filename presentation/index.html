@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Medisync - AI-Powered Hospital System</title>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/white.min.css">
+
+	<!-- Custom Styling -->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- Slide 1: Title -->
+			<section class="text-center">
+				<div class="card">
+					<h1>Medisync</h1>
+					<h3>AI-Powered Hospital Orchestration</h3>
+					<p class="highlight">Optimizing Operations • Balancing Workloads • Real-Time Auditing</p>
+					<br>
+					<small>Future Org Design Proposal</small>
+				</div>
+			</section>
+
+			<!-- Slide 2: Introduction -->
+			<section>
+				<h2>The Challenge</h2>
+				<div class="card">
+					<p><strong>Hospital services are inherently complex.</strong></p>
+					<hr style="border-color: rgba(0,0,0,0.1);">
+					<div class="fragment fade-up">
+						<h4>🛑 Fragmented Coordination</h4>
+						<p class="small-text">Unsynchronized collaboration between departments leads to inefficiencies.
+						</p>
+					</div>
+					<div class="fragment fade-up">
+						<h4>🛑 Workload Imbalance</h4>
+						<p class="small-text">Manual assignment causes nurse burnout and compromised care quality.</p>
+					</div>
+					<div class="fragment fade-up">
+						<h4>🛑 Operational Delays</h4>
+						<p class="small-text">Reliance on memory and manual docs slows down critical procedures.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Slide 3: Problem Statement -->
+			<section>
+				<h2>Key Problems</h2>
+				<div class="container">
+					<div class="col fragment fade-right">
+						<h4>Coordination</h4>
+						<p class="small-text">How to unify medical, admin, and support staff?</p>
+					</div>
+					<div class="col fragment fade-up">
+						<h4>Allocation</h4>
+						<p class="small-text">How to assign tasks fairly based on <em>real-time</em> data?</p>
+					</div>
+					<div class="col fragment fade-left">
+						<h4>Execution</h4>
+						<p class="small-text">How to automate tracking of medical instructions?</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Slide 4: Objectives -->
+			<section>
+				<h2>Objectives</h2>
+				<div class="card">
+					<ul>
+						<li class="fragment"><strong>Enhance Utilization:</strong> Auto-assign based on capacity.</li>
+						<li class="fragment"><strong>Timely Execution:</strong> Intelligent scheduling & alerts.</li>
+						<li class="fragment"><strong>Stop Leakage:</strong> Automated financial auditing.</li>
+						<li class="fragment"><strong>Empower Patients:</strong> AI Chatbots for personalized info.</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Slide 5: Target Users -->
+			<section>
+				<h2>Target Users</h2>
+				<div class="container">
+					<div class="col fragment">
+						<h4>Management</h4>
+						<p class="small-text">Operational monitoring.</p>
+					</div>
+					<div class="col fragment">
+						<h4>Doctors</h4>
+						<p class="small-text">AI Clinical support.</p>
+					</div>
+				</div>
+				<br>
+				<div class="container">
+					<div class="col fragment">
+						<h4>Nurses</h4>
+						<p class="small-text">Fair task lists.</p>
+					</div>
+					<div class="col fragment">
+						<h4>Patients</h4>
+						<p class="small-text">Fast service.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Slide 6: Solution Overview -->
+			<section>
+				<h2>Medisync Solution</h2>
+				<p>A central nervous system for hospitals.</p>
+				<div class="card">
+					<p><strong class="highlight">Phase 1: Orchestrator</strong><br> <span class="small-text">Patient
+							tickets, active workload allocation, procedure records.</span></p>
+					<p><strong class="highlight">Phase 2: Decision Support</strong><br> <span class="small-text">AI
+							recommendations for diagnostics and prescriptions.</span></p>
+					<p><strong class="highlight">Phase 3: Automated Payment</strong><br> <span
+							class="small-text">Real-time billing closure.</span></p>
+				</div>
+			</section>
+
+			<!-- Slide 7: Innovation & AI -->
+			<section>
+				<h2>The AI Engine</h2>
+				<p>Multi-Agent System (MAS) Approach</p>
+				<div class="container">
+					<div class="col" style="flex: 2;">
+						<h4>🤖 Role Assigner</h4>
+						<p class="small-text">Dynamic Workload Balancer. Detects "Doctor A has 14 cases" vs "Doctor B
+							has 11" and routes accordingly.</p>
+					</div>
+					<div class="col" style="flex: 1.5;">
+						<h4>🤖 Context Chatbot</h4>
+						<p class="small-text">RAG-based. Checks EMR before answering.</p>
+					</div>
+				</div>
+				<div class="card">
+					<h4>🛡️ The Audit Triad</h4>
+					<ul class="pill-list" style="justify-content: center;">
+						<li>Audit Ruangan (Facilities)</li>
+						<li>Audit Obat (Contraindications)</li>
+						<li>Audit Harga (Real-time Billing)</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Slide 8: System Architecture -->
+			<section>
+				<h2>Workflow</h2>
+				<div class="card small-text">
+					<ol>
+						<li><strong>Entry:</strong> Registration -> Unique Ticket ID.</li>
+						<li><strong>Orchestration:</strong> Agent assigns Team (Dr/Nurse) based on load.</li>
+						<li><strong>Validation:</strong> Room Audit checks availability.</li>
+						<li><strong>Care:</strong> Doctor gets AI Clinical Decision Support.</li>
+						<li><strong>Exit:</strong> Discharge -> Auto-Invoice -> Online Payment.</li>
+					</ol>
+				</div>
+			</section>
+
+			<!-- Slide 9: Impact Analysis -->
+			<section>
+				<h2>Impact</h2>
+				<div class="container">
+					<div class="col fragment">
+						<h4>❤️ Social</h4>
+						<p class="small-text">Reduced burnout.<br>Improves patient safety.</p>
+					</div>
+					<div class="col fragment">
+						<h4>💰 Economic</h4>
+						<p class="small-text">Stops revenue leakage.<br>Automated billing accuracy.</p>
+					</div>
+					<div class="col fragment">
+						<h4>🏥 Org</h4>
+						<p class="small-text">Adaptive, data-driven hospital management.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Slide 10: Conclusion -->
+			<section class="text-center">
+				<div class="card">
+					<h2>Future of Healthcare</h2>
+					<p>Medisync transforms hospitals from reactive to <strong>active, AI-orchestrated
+							organizations.</strong></p>
+				</div>
+				<h3 class="highlight">Thank You</h3>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			controls: true,
+			progress: true,
+			center: true, // we override this in css for 'present' class but keeping it true helps initial calc
+			transition: 'slide',
+		});
+	</script>
+</body>
+
+</html>
