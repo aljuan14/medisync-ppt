@@ -1,50 +1,384 @@
-/* Medisync Theme - Clean Medical/Tech */
+/* ============================================
+   MEDISYNC PRESENTATION - REMASTERED
+   Based on RempahRaya Premium Design Language
+   ============================================ */
+
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
 :root {
-    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+    /* Brand Colors - Medical Tech (Blue/Cyan/Teal) */
+    --brand-50: #f0f9ff;
+    --brand-100: #e0f2fe;
+    --brand-200: #bae6fd;
+    --brand-300: #7dd3fc;
+    --brand-400: #38bdf8;
+    --brand-500: #0ea5e9;
+    --brand-600: #0284c7;
+    --brand-700: #0369a1;
+    --brand-800: #075985;
+    --brand-900: #0c4a6e;
+    --brand-950: #082f49;
+
+    /* Accents */
+    --accent-violet: #8b5cf6;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-amber: #f59e0b;
+
+    /* Gradients */
+    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+    --primary-gradient: linear-gradient(135deg, var(--brand-500), var(--brand-600));
+    --glass-shimmer: linear-gradient(120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 70%);
+
+    /* Design Tokens */
+    --radius-lg: 1.5rem;
+    --radius-xl: 2.5rem;
+    --shadow-soft: 0 10px 40px -10px rgba(8, 51, 73, 0.08);
+    --shadow-glow: 0 20px 50px -15px rgba(14, 165, 233, 0.25);
+
+    /* Animation */
+    --transition-normal: 0.4s;
+    --easing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ============================================
+   BASE STYLES
+   ============================================ */
 body {
-    background: var(--bg-gradient);
-    font-family: 'Inter', sans-serif;
+    background-color: var(--brand-50);
+    background-image: radial-gradient(var(--brand-200) 0.5px, transparent 0.5px), radial-gradient(var(--brand-200) 0.5px, var(--brand-50) 0.5px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    font-family: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
+    color: var(--brand-900);
+    overflow: hidden;
 }
 
-.reveal {
-    color: #1e293b;
-    /* slate-800 */
-}
-
-/* Force Tailwind Specificity over Reveal Theme */
+/* Typography Overrides */
 .reveal h1,
 .reveal h2,
 .reveal h3,
 .reveal h4,
-.reveal h5,
-.reveal h6 {
+.reveal h5 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+    color: var(--brand-950);
     text-transform: none;
-    font-family: 'Inter', sans-serif;
+    font-weight: 800;
 }
 
-/* Glassmorphism Utilities that are hard to do purely with standard Tailwind classes without config */
-.glass-card {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.reveal h1 {
+    font-size: 3.5rem;
 }
 
-/* Ensure slides allow flex/grid layouts from Tailwind */
+.reveal h2 {
+    font-size: 2.5rem;
+}
+
+.reveal h3 {
+    font-size: 1.75rem;
+}
+
+.reveal h4 {
+    font-size: 1.25rem;
+}
+
+.reveal p,
+.reveal li {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+    color: var(--brand-800);
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* Reveal.js Layout Fixes */
 .reveal .slides section {
     height: 100%;
     display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
-/* Lucide Icons alignment */
-.lucide {
-    display: inline-block;
-    vertical-align: middle;
+/* ============================================
+   GLASS COMPONENTS
+   ============================================ */
+/* Premium Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2.5rem;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: var(--shadow-glow);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.glass-card-dark {
+    background: linear-gradient(135deg, var(--brand-900) 0%, var(--brand-800) 100%);
+    color: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-glow);
+}
+
+/* ============================================
+   DECORATIVE ELEMENTS
+   ============================================ */
+/* Blurred Orbs */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -1;
+    animation: floatOrb 12s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.orb-1 {
+    width: 600px;
+    height: 600px;
+    background: var(--brand-200);
+    top: -200px;
+    right: -200px;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--brand-100);
+    bottom: -200px;
+    left: -200px;
+    animation-delay: -5s;
+}
+
+.orb-3 {
+    width: 300px;
+    height: 300px;
+    background: #e0f2fe;
+    /* light cyan */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    filter: blur(100px);
+}
+
+@keyframes floatOrb {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(30px, -30px) scale(1.05);
+    }
+}
+
+/* Icon Boxes */
+.icon-box {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+}
+
+.glass-card:hover .icon-box {
+    transform: scale(1.1) rotate(6deg);
+}
+
+.icon-box.brand {
+    background: white;
+    color: var(--brand-600);
+    border: 1px solid var(--brand-100);
+}
+
+.icon-box.accent {
+    background: white;
+    color: var(--accent-violet);
+    border: 1px solid #f3e8ff;
+}
+
+.icon-box.success {
+    background: white;
+    color: var(--accent-emerald);
+    border: 1px solid #dcfce7;
+}
+
+.icon-box.rose {
+    background: white;
+    color: var(--accent-rose);
+    border: 1px solid #ffe4e6;
+}
+
+.icon-box.amber {
+    background: white;
+    color: var(--accent-amber);
+    border: 1px solid #fef3c7;
+}
+
+/* ============================================
+   TEXT & UTILITIES
+   ============================================ */
+.text-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--brand-100);
+    color: var(--brand-700);
+    margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   WORKFLOW ANIMATIONS & LAYOUT
+   ============================================ */
+.workflow-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.workflow-item {
+    position: relative;
+    padding: 2.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2rem;
+    border: 1px solid white;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.workflow-item:hover {
+    transform: translateY(-15px);
+    background: white;
+    box-shadow: var(--shadow-glow);
+    z-index: 10;
+}
+
+/* Connector Lines */
+.workflow-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -2.5rem;
+    /* Adjusted for gap */
+    width: 3rem;
+    /* Adjusted for gap */
+    height: 3px;
+    background: var(--brand-100);
+    z-index: 0;
+}
+
+.workflow-number {
+    width: 40px;
+    height: 40px;
+    background: var(--brand-500);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
+    border: 3px solid white;
+}
+
+/* ============================================
+   IMPACT GRID
+   ============================================ */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.impact-card {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid white;
+    border-radius: 2.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.impact-card:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.reveal .fragment.custom-blur {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.reveal .fragment.custom-blur.visible {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
