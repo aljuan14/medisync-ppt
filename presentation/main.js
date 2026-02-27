@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         width: 1280,
         height: 720,
-        margin: 0.04,
+        margin: 0.02,
         minScale: 0.2,
         maxScale: 2.0,
 

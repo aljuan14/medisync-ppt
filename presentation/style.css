@@ -382,3 +382,278 @@ body {
         transform: translateY(-10px);
     }
 }
+
+/* ============================================
+   PRESENTER BADGES
+   ============================================ */
+.presenter-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.presenter-divider {
+    font-weight: 700;
+    color: var(--brand-300);
+    font-size: 0.85rem;
+}
+
+.presenter-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.presenter-badge.p1 {
+    background: #ede9fe;
+    color: #6d28d9;
+    border: 1px solid #c4b5fd;
+}
+
+.presenter-badge.p2 {
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #86efac;
+}
+
+/* ============================================
+   STAR SECTION LABELS
+   ============================================ */
+.star-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.star-label.situation {
+    background: #fef3c7;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+.star-label.task {
+    background: #ede9fe;
+    color: #6d28d9;
+    border: 1px solid #c4b5fd;
+}
+
+.star-label.action {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+
+.star-label.result {
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #86efac;
+}
+
+/* ============================================
+   SWOT ANALYSIS
+   ============================================ */
+.swot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.swot-card {
+    border-radius: 1.5rem;
+    padding: 1.5rem 1.75rem;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swot-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.1);
+}
+
+.swot-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+}
+
+.swot-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.swot-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.swot-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.swot-list li {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.swot-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+}
+
+/* Strengths */
+.swot-card.strengths {
+    background: rgba(220, 252, 231, 0.6);
+    border-color: #86efac;
+}
+
+.swot-card.strengths .swot-icon {
+    background: #bbf7d0;
+    color: #15803d;
+}
+
+.swot-card.strengths .swot-title {
+    color: #15803d;
+}
+
+.swot-card.strengths .swot-list li::before {
+    color: #22c55e;
+}
+
+/* Weaknesses */
+.swot-card.weaknesses {
+    background: rgba(254, 226, 226, 0.6);
+    border-color: #fca5a5;
+}
+
+.swot-card.weaknesses .swot-icon {
+    background: #fecaca;
+    color: #b91c1c;
+}
+
+.swot-card.weaknesses .swot-title {
+    color: #b91c1c;
+}
+
+.swot-card.weaknesses .swot-list li::before {
+    color: #ef4444;
+}
+
+/* Opportunities */
+.swot-card.opportunities {
+    background: rgba(219, 234, 254, 0.6);
+    border-color: #93c5fd;
+}
+
+.swot-card.opportunities .swot-icon {
+    background: #bfdbfe;
+    color: #1d4ed8;
+}
+
+.swot-card.opportunities .swot-title {
+    color: #1d4ed8;
+}
+
+.swot-card.opportunities .swot-list li::before {
+    color: #3b82f6;
+}
+
+/* Threats */
+.swot-card.threats {
+    background: rgba(254, 243, 199, 0.6);
+    border-color: #fcd34d;
+}
+
+.swot-card.threats .swot-icon {
+    background: #fde68a;
+    color: #b45309;
+}
+
+.swot-card.threats .swot-title {
+    color: #b45309;
+}
+
+.swot-card.threats .swot-list li::before {
+    color: #f59e0b;
+}
+
+/* ============================================
+   TELEGRAM MESSAGE BUBBLE
+   ============================================ */
+.tg-msg {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 12px;
+    padding: 0.6rem 0.8rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* ============================================
+   SWOT MINI GRID (Slide 10 — 2x2 compact)
+   ============================================ */
+.swot-grid-mini {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.swot-grid-mini .swot-card {
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+}
+
+.swot-grid-mini .swot-title {
+    font-size: 0.9rem;
+}
+
+.swot-grid-mini .swot-list li {
+    font-size: 0.72rem;
+}
+
+/* ============================================
+   SLIDE 1 — SUBTITLE (DM Serif Display)
+   ============================================ */
+.slide1-subtitle {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 2.4rem;
+    color: var(--brand-500);
+    opacity: 0.85;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    margin-top: 0.25rem;
+}
