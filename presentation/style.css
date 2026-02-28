@@ -622,27 +622,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-/* ============================================
-   SWOT MINI GRID (Slide 10 — 2x2 compact)
-   ============================================ */
-.swot-grid-mini {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-}
 
-.swot-grid-mini .swot-card {
-    padding: 1rem 1.25rem;
-    border-radius: 1rem;
-}
-
-.swot-grid-mini .swot-title {
-    font-size: 0.9rem;
-}
-
-.swot-grid-mini .swot-list li {
-    font-size: 0.72rem;
-}
 
 /* ============================================
    SLIDE 1 — SUBTITLE (DM Serif Display)
